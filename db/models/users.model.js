@@ -35,6 +35,18 @@ const UserSchema = {
     allowNull: false,
     type: DataTypes.STRING,
     unique: true
+  },
+  createdAt: {
+    allowNull: false,
+    field: 'created_at',
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW
+  },
+  updatedAt: {
+    allowNull: false,
+    field: 'updated_at',
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW
   }
 }
 
@@ -48,7 +60,7 @@ class User extends Model {
       sequelize,
       tableName: USER_TABLE,
       modelName: 'User',
-      timestamps: true
+      timestamps: false
     }
   }
 }

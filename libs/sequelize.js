@@ -4,7 +4,7 @@ const { config } = require('./../config/config')
 const setupModels = require('./../db/models')
 
 const options = {
-  dialect: 'mysql',
+  dialect: 'postgres',
   logging: config.isProd ? false : true, // eslint-disable-line
 }
 

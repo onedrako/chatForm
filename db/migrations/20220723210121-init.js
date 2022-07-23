@@ -3,7 +3,7 @@
 const { USER_TABLE } = require('../models/users.model')
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable(USER_TABLE, {
       id: {
         allowNull: false,
@@ -37,11 +37,23 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DataTypes.STRING,
         unique: true
+      },
+      createdAt: {
+        allowNull: false,
+        field: 'created_at',
+        type: Sequelize.DataTypes.DATE,
+        defaultValue: Sequelize.DataTypes.NOW
+      },
+      updatedAt: {
+        allowNull: false,
+        field: 'updated_at',
+        type: Sequelize.DataTypes.DATE,
+        defaultValue: Sequelize.DataTypes.NOW
       }
     })
   },
 
-  async down (queryInterface, Sequelize) {
+  down: async (queryInterface) => {
     await queryInterface.dropTable(USER_TABLE)
   }
 }

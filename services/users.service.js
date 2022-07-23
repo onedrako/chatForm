@@ -1,4 +1,4 @@
-const { models } = require('./../db/models')
+const { models } = require('../libs/sequelize')
 const boom = require('@hapi/boom')
 
 class UserService {
