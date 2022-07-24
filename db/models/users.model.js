@@ -11,20 +11,22 @@ const UserSchema = {
   },
   name: {
     allowNull: false,
-    type: DataTypes.STRING,
-    unique: true
+    type: DataTypes.STRING
+  },
+  secondName: {
+    allowNull: false,
+    field: 'second_name',
+    type: DataTypes.STRING
   },
   paternalSurname: {
     allowNull: false,
     field: 'paternal_surname',
-    type: DataTypes.STRING,
-    unique: true
+    type: DataTypes.STRING
   },
   maternalSurname: {
     allowNull: false,
     field: 'maternal_surname',
-    type: DataTypes.STRING,
-    unique: true
+    type: DataTypes.STRING
   },
   dateOfBirth: {
     allowNull: false,
@@ -34,6 +36,11 @@ const UserSchema = {
   email: {
     allowNull: false,
     type: DataTypes.STRING,
+    unique: true
+  },
+  phone: {
+    allowNull: false,
+    type: DataTypes.INTEGER,
     unique: true
   },
   createdAt: {

@@ -13,20 +13,22 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.DataTypes.STRING,
-        unique: true
+        type: Sequelize.DataTypes.STRING
+      },
+      secondName: {
+        allowNull: false,
+        field: 'second_name',
+        type: Sequelize.DataTypes.STRING
       },
       paternalSurname: {
         allowNull: false,
         field: 'paternal_surname',
-        type: Sequelize.DataTypes.STRING,
-        unique: true
+        type: Sequelize.DataTypes.STRING
       },
       maternalSurname: {
         allowNull: false,
         field: 'maternal_surname',
-        type: Sequelize.DataTypes.STRING,
-        unique: true
+        type: Sequelize.DataTypes.STRING
       },
       dateOfBirth: {
         allowNull: false,
@@ -36,6 +38,11 @@ module.exports = {
       email: {
         allowNull: false,
         type: Sequelize.DataTypes.STRING,
+        unique: true
+      },
+      phone: {
+        allowNull: false,
+        type: Sequelize.DataTypes.INTEGER,
         unique: true
       },
       createdAt: {
