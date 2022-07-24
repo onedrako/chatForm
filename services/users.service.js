@@ -4,8 +4,8 @@ const boom = require('@hapi/boom')
 class UserService {
   async find () {
     const users = await models.User.findAll()
-    if (!users) {
-      throw boom.notFound('Users not found on database')
+    if (users.length === 0) {
+      throw boom.notFound('There are 0 users on database')
     }
     return users
   }

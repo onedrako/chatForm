@@ -14,13 +14,13 @@ const UserSchema = {
     type: DataTypes.STRING,
     unique: true
   },
-  paternalSurName: {
+  paternalSurname: {
     allowNull: false,
     field: 'paternal_surname',
     type: DataTypes.STRING,
     unique: true
   },
-  maternalSurName: {
+  maternalSurname: {
     allowNull: false,
     field: 'maternal_surname',
     type: DataTypes.STRING,

@@ -5,10 +5,6 @@ const config = {
   isProd: process.env.NODE_ENV === 'production',
   port: process.env.PORT,
   dbUrl: process.env.DATABASE_URL,
-  apiKey: process.env.API_KEY,
-  jwtSecret: process.env.JWT_SECRET,
-  smtpEmail: process.env.SMTP_MAIL,
-  smtpPassword: process.env.SMTP_PASS,
   frontendUrl: process.env.FRONTEND_URL,
   localhost: process.env.LOCALHOST
 }
