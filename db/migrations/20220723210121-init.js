@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.DataTypes.STRING
       },
       secondName: {
-        allowNull: false,
+        allowNull: true,
         field: 'second_name',
         type: Sequelize.DataTypes.STRING
       },
@@ -42,7 +42,7 @@ module.exports = {
       },
       phone: {
         allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
+        type: Sequelize.DataTypes.STRING,
         unique: true
       },
       createdAt: {

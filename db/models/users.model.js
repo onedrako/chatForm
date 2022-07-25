@@ -14,7 +14,7 @@ const UserSchema = {
     type: DataTypes.STRING
   },
   secondName: {
-    allowNull: false,
+    allowNull: true,
     field: 'second_name',
     type: DataTypes.STRING
   },
@@ -40,7 +40,7 @@ const UserSchema = {
   },
   phone: {
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     unique: true
   },
   createdAt: {
